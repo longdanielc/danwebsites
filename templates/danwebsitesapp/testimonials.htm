@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+
+<HEAD>
+
+
+
+<TITLE>DanWebsites.com!</TITLE>
+
+
+
+<META NAME="description" CONTENT="Client list for Dan Long">
+
+
+
+<META NAME="keywords" CONTENT="Dan Long,Websites,web sites,web services,web programming,clients">
+
+
+
+<!--BEGIN Pop-up Windows Script------------------------------------------>
+
+<SCRIPT Language="JavaScript">
+
+<!--
+
+// Copyright 1999 - 2001 by Ray Stott, Pop-up Windows Script ver 2.0
+
+// OK to use if this copyright is included
+
+// Script is available at http://www.crays.com/jsc          
+
+
+
+var popWin = null    // use this when referring to pop-up window
+
+var winCount = 0
+
+var winName = "popWin"
+
+function openPopWin(winURL, winWidth, winHeight, winFeatures, winLeft, winTop){
+
+  var d_winLeft = 20  // default, pixels from screen left to window left
+
+  var d_winTop = 20   // default, pixels from screen top to window top
+
+  winName = "popWin" + winCount++ //unique name for each pop-up window
+
+  closePopWin()           // close any previously opened pop-up window
+
+  if (openPopWin.arguments.length >= 4)  // any additional features? 
+
+    winFeatures = "," + winFeatures
+
+  else 
+
+    winFeatures = "" 
+
+  if (openPopWin.arguments.length == 6)  // location specified
+
+    winFeatures += getLocation(winWidth, winHeight, winLeft, winTop)
+
+  else
+
+    winFeatures += getLocation(winWidth, winHeight, d_winLeft, d_winTop)
+
+  popWin = window.open(winURL, winName, "width=" + winWidth 
+
+           + ",height=" + winHeight + winFeatures)
+
+  }
+
+function closePopWin(){    // close pop-up window if it is open 
+
+  if (navigator.appName != "Microsoft Internet Explorer" 
+
+      || parseInt(navigator.appVersion) >=4) //do not close if early IE
+
+    if(popWin != null) if(!popWin.closed) popWin.close() 
+
+  }
+
+function getLocation(winWidth, winHeight, winLeft, winTop){
+
+  return ""
+
+  }
+
+//-->
+
+</SCRIPT>
+
+<SCRIPT Language="JavaScript1.2">  // for Netscape 4+ and IE 4+
+
+<!--
+
+function getLocation(winWidth, winHeight, winLeft, winTop){
+
+  var winLocation = ""
+
+  if (winLeft < 0)
+
+    winLeft = screen.width - winWidth + winLeft
+
+  if (winTop < 0)
+
+    winTop = screen.height - winHeight + winTop
+
+  if (winTop == "cen")
+
+    winTop = (screen.height - winHeight)/2 - 20
+
+  if (winLeft == "cen")
+
+    winLeft = (screen.width - winWidth)/2
+
+  if (winLeft>0 & winTop>0)
+
+    winLocation =  ",screenX=" + winLeft + ",left=" + winLeft 
+
+                + ",screenY=" + winTop + ",top=" + winTop
+
+  else
+
+    winLocation = ""
+
+  return winLocation
+
+  }
+
+//-->
+
+</SCRIPT>
+
+<!--END Pop-up Windows Script------------------------------------------->
+
+</head>
+
+
+
+<body bgcolor=#0099FF link="#FFFFFF" alink="#FFFFFF" vlink="#FFFFFF">
+
+<center>
+
+<img src="/static/images/DanWebsitesNew.jpg"><br>
+
+<!-- ImageReady Slices (Nav.psd) -->
+<TABLE WIDTH=800 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+  <TR>
+    <TD BGCOLOR=#0099FF>
+      <IMG src="/static/images/Nav_02.jpg" WIDTH=212 HEIGHT=44></TD>
+    <TD BGCOLOR=#0099FF>
+      <A HREF="{% url 'index' %}">
+        <IMG SRC="/static/images/Nav_03.jpg" WIDTH=103 HEIGHT=44 BORDER=0></A></TD>
+    <TD BGCOLOR=#0099FF>
+      <A HREF="{% url 'testimonials' %}">
+        <IMG SRC="/static/images/Nav_04.jpg" WIDTH=137 HEIGHT=44 BORDER=0></A></TD>
+    <TD BGCOLOR=#0099FF>
+      <A HREF="{% url 'contact' %}">
+        <IMG SRC="/static/images/Nav_05.jpg" WIDTH=141 HEIGHT=44 BORDER=0></A></TD>
+    <TD BGCOLOR=#0099FF>
+      <A HREF="{% url 'index' %}">
+        <IMG SRC="/static/images/Nav_06.jpg" WIDTH=207 HEIGHT=44 BORDER=0></A></TD>
+  </TR>
+</TABLE>
+<!-- End ImageReady Slices -->
+
+<p align="center">
+<font face=Arial size="5" color="#FFFFFF">Testimonials</font>
+</p>
+
+
+<font face=Arial size=3 color=#FFFFFF>
+
+
+<TABLE WIDTH=800 BORDER=0 CELLPADDING=0 CELLSPACING=0>
+
+<TR>
+<TD align=left>
+<font face="Arial" color="#ffffff" size="3">
+"I really appreciate the freedom that Dan has given me in updating and modifying the CHVAGO web site. I maintain another web site which is much more frustrating because it is handled through a marketing company. There is no way to alter the supplied template, so I am stuck with certain design features that I don't like. Also there is absolutely no technical support. So it is a real blessing to be able to email Dan a note and be confident that all will be well."
+</font> 
+</td>
+</tr>
+<tr>
+<TD align=right>
+<font face="Arial" color="#ffffff" size="4"><b>Susan LaGrande, </b><i>webmaster</i></font><br>
+<font face="Arial" color="#ffffff" size="3"><a href='javascript:openPopWin("http://www.chvago.org/", 800, 600, "toolbar,location,directories,status,menubar,scrollbars,resizable", "10", "10")'>CHVAGO.org</a>
+<br><br><br>
+</TD>
+</TR>
+
+<!-- <TR>
+<TD align=left>
+<font face="Arial" color="#ffffff" size="3">
+"Dan Long developed my website and has been maintaining it for me for the past two years.  I’m thrilled with his design which matches the tone of my book and compliments my cover.  I often need to update my site with new reviews and events and I love that all it takes is a quick email to Dan—it’s important for me to have a webmaster who’s easily accessible, professional, and careful. I never need to worry about a link not functioning or getting the help I need."
+</font> 
+</td>
+</tr>
+<tr>
+<TD align=right>
+<font face="Arial" color="#ffffff" size="4"><b>Lynn Biederman, </b><i>author</i></font><br>
+<font face="Arial" color="#ffffff" size="3"><a href='javascript:openPopWin("http://www.LynnBiederman.com", 800, 600, "toolbar,location,directories,status,menubar,scrollbars,resizable", "10", "10")'>LynnBiederman.com</a>
+<br><br><br>
+</TD>
+</TR>
+-->
+<TR>
+<TD align=left>
+<font face="Arial" color="#ffffff" size="3">
+"Dan Long has set up and maintained numerous professional and personal web sites for me over the past seven years.  I've always found Dan to be highly responsive, quite knowledgeable and very personable.  He is a pleasure to work with."
+</font> 
+</td>
+</tr>
+<tr>
+<TD align=right>
+<font face="Arial" color="#ffffff" size="4"><b>Greg Miller, </b><i>Gregory Miller and Company</i></font><br>
+<font face="Arial" color="#ffffff" size="3"><a href='javascript:openPopWin("http://www.GregoryMillerandCompany.com", 800, 600, "toolbar,location,directories,status,menubar,scrollbars,resizable", "10", "10")'>GregoryMillerandCompany.com</a>
+<br><br><br>
+</TD>
+</TR>
+
+<TR>
+<TD align=left>
+<font face="Arial" color="#ffffff" size="3">
+"Dan Long created my website over 7 years ago and has been maintaining it ever since.  He stays on top of the Internet marketing trends and always comes to me with new ideas, not only to improve the website, but also with new ideas about how to market my singing career.  However, what is most important to me is that Dan is reliable, honest and trustworthy."
+</font> 
+</td>
+</tr>
+<tr>
+<TD align=right>
+<font face="Arial" color="#ffffff" size="4"><b>Jenny Lynn Stewart, </b><i>soprano</i></font><br>
+<font face="Arial" color="#ffffff" size="3"><a href='javascript:openPopWin("http://www.ManhattanDiva.com", 800, 600, "toolbar,location,directories,status,menubar,scrollbars,resizable", "10", "10")'>ManhattanDiva.com</a>
+<br><br><br>
+</TD>
+</TR>
+
+<TR>
+<TD align=left>
+<font face="Arial" color="#ffffff" size="3">
+"Dan Long has provided excellent website services for my company, Westco Media, and for our website, Gettingyourmoneysworthnyc.com. His website design is attractive and, most important, extremely user friendly. In servicing our site, Dan’s response is immediate, efficient and always on target. We can recommend his services enthusiastically."
+</font> 
+</td>
+</tr>
+<tr>
+<TD align=right>
+<font face="Arial" color="#ffffff" size="4"><b>Judith West, </b><i>Host, Getting Your Money's Worth / President, Westco Media</i></font><br>
+<font face="Arial" color="#ffffff" size="3"><a href='javascript:openPopWin("http://www.GettingYourMoneysWorthNYC.com", 800, 600, "toolbar,location,directories,status,menubar,scrollbars,resizable", "10", "10")'>GettingYourMoneysWorthNYC.com</a>
+<br><br><br>
+</TD>
+</TR>
+
+</TABLE>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
